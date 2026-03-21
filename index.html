@@ -1,268 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omar Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Portfolio</title>
 
-<style>
-    html{
-        scroll-behavior: smooth;
-    }
-
-
-body{
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-margin:0;
-text-transform: capitalize;
-background:#0f172a;
-color:white;
-}
-
-header{
-background:#020617;
-padding:20px;
-text-align:center;
-}
-
-nav a{
-color:white;
-width: 100px;
-transition: 250ms;
-margin: 0;
-padding: 10px;
-text-decoration:none;
-font-size:18px;
-}
-a:hover{
-    background: linear-gradient(135deg,#020617,cyan);
-}
-.p{
-    font-weight: 800;
-    text-decoration: underline;
-}
-
-section{
-padding:40px;
-text-align:center;
-}
-
-.card{
-background:lch(35.94% 29.35 277.48);
-padding:20px;
-margin:15px;
-border-radius:10px;
-display:inline-block;
-width:250px;
-backdrop-filter: blur(10px);
-}
-
-button{
-padding:20px 40px;
-border:none;
-
-border-radius:8px;
-background:#38bdf8;
-cursor:pointer;
-font-weight: 900;
-transition: 250ms;
-}
-button:active{
-    transform: scale(0.95);
-}
-
-footer{
-background:#020617;
-text-align:center;
-padding:20px;
-}
-.div1{
-    height: 850px;width: 500px;
-    border: 3px solid white;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 30px;
-    
-
-}
-img{
-    width: 350px;
-    height: 210px;
-    margin: 15px;
-    padding: 10px;
-    border: 3px solid white;
-}
-p{text-align: center;
-
-}
-.img{
-    border: none;
-    height: 70px;
-    width: 70px;
-}
-#omar{
-    width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  border: 4px solid transparent;
-  padding: 8px;
-  
-  background: 
-    linear-gradient(#111, #111) padding-box,
-    linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc, #ffcc00) border-box;
-
-  background-size: 400% 400%;
-  animation: gradientMove 6s ease infinite;
-
-  
-  color: white;
-  font-size: 20px;
-  font-family: Arial;
-}
-
-/* Animation */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
 
-}
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            text-transform: capitalize;
+            background: #0f172a;
+            color: white;
+            cursor: auto;
+        }
 
-</style>
+        header {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            width: 100px;
+            transition: 250ms;
+            margin: 0;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a {
+            transition: all 259ms;
+        }
+
+        a:hover {
+            background-color: cyan;
+            transition-duration: 0.2s;
+
+
+        }
+
+        .p {
+            font-weight: 800;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+
+        .card {
+            position: relative;
+            padding: 29px;
+            margin: 15px;
+            border-radius: 15px;
+            display: inline-block;
+            width: 250px;
+            color: white;
+            background: #020617;
+            overflow: hidden;
+            transition: 800ms;
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .card:hover {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: -5px;
+            border-radius: 15px;
+            background: linear-gradient(270deg, #000000, #2f2fad, #2949d7, #009dff);
+            background-size: 400% 400%;
+            z-index: -3;
+            animation: borderMove 9s linear infinite;
+        }
+
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            background: #020617;
+            border-radius: 13px;
+            z-index: -1;
+        }
+
+        /* Hover */
+
+
+        /* Animation */
+        @keyframes borderMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 400% 50%;
+            }
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Delay effect */
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        button {
+            padding: 20px 40px;
+            border: none;
+
+            border-radius: 8px;
+            background: #38bdf8;
+            cursor: pointer;
+            font-weight: 900;
+            transition: 250ms;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 39px #38bdf8;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .div1 {
+            height: 780px;
+            width: 430px;
+            border: 3px solid white;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 30px;
+
+
+        }
+
+
+        img {
+            width: 350px;
+            height: 210px;
+            margin: 15px;
+            padding: 0px;
+
+        }
+
+        p {
+            text-align: center;
+
+        }
+
+        .img {
+            border: none;
+            height: 70px;
+            width: 70px;
+        }
+
+        #omar {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            border: 4px solid transparent;
+            padding: 8px;
+
+            background:
+                linear-gradient(#111, #111) padding-box,
+                linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc, #ffcc00) border-box;
+
+            background-size: 400% 400%;
+            animation: gradientMove 6s ease infinite;
+
+
+            color: white;
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        /* Animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+
+
+        }
+    </style>
 </head>
 
 <body id="body">
-    
-<header id="head">
-<h1>Omar Hmeesy</h1>
-<img src="myphoto.jpg" alt="" id="omar">
-<p>Future Web Developer</p>
-<hr>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+    <header id="head">
+        <h1>Omar Hmeesy</h1>
+        <img src="myphoto.jpg" alt="" id="omar">
+        <p>Future Web Developer</p>
+        <hr>
 
-</header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-<section id="about">
-<h2>About Me</h2>
-<p class="p">Hello, I'm Omar. I'm an expert at html , css and intermediate at javascript and python </p>
-<p class="p">I'm 17 years old and i'm studying at 2nd of secondary education at pc scienses</p>
-</section>
+    </header>
 
-<section id="skills">
-<h2>My Skills</h2>
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="p">Hello, I'm Omar. I'm an expert at html , css and intermediate at javascript and python </p>
+        <p class="p">I'm 17 years old and i'm studying at 2nd of secondary education at pc scienses</p>
+    </section>
 
-<div class="card">
-<h3>HTML</h3>
-<p>Building website structure</p>
-<img src="html.png" alt="" class="img">
-</div>
-<div class="card">
-    <h3>Python</h3>
-    <p>data structures and bases</p>
-    <img src="python.png" alt="" class="img">
-</div>
+    <section id="skills">
+        <h2>My Skills</h2>
 
-<div class="card">
-<h3>CSS</h3>
-<p>Design and layouts</p>
-<img src="css.png" alt="" class="img">
-</div>
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Building website structure</p>
+            <img src="html.png" alt="" class="img">
+        </div>
+        <div class="card">
+            <h3>Python</h3>
+            <p>data structures and bases</p>
+            <img src="python.png" alt="" class="img">
+        </div>
 
-<div class="card">
-<h3>JavaScript</h3>
-<p>Website interactivity</p>
-<img src="js.webp" alt="" class="img">
-</div>
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Design and layouts</p>
+            <img src="css.png" alt="" class="img">
+        </div>
 
-</section>
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Website interactivity</p>
+            <img src="js.webp" alt="" class="img">
+        </div>
 
-<section id="projects">
-<h2>My Projects</h2>
+    </section>
 
-<div class="card">
-<h3>Calculer Moyenne Bac Principal</h3>
-<a href="https://omarhmissi7.github.io/Calculer_Moyenne_Bac_Principal/"><button>VIEW THE LINK</button></a>
-</div>
-<p>
-    <center>
-        <div class="div1">
-    <img src="Capture d'écran 2026-03-18 130320.png" alt="" srcset=""><br>
-    <img src="Capture d'écran 2026-03-18 130429.png" alt="" srcset=""><br>
-    <img src="Capture d'écran 2026-03-18 130547.png" alt="" srcset=""><br>
-</div>
-    </center>
-</p>
+    <section id="projects">
+        <h2>My Projects</h2>
 
-<div class="card">
-<h3>Random Number Generator</h3>
-<p>Generate numbers between 1000 and 9999.</p>
-</div>
-<br>
+        <div class="card">
+            <h3>Calculer Moyenne Bac Principal</h3>
+            <a href="https://omarhmissi7.github.io/Calculer_Moyenne_Bac_Principal/"><button>VIEW THE LINK</button></a>
+        </div>
+        <p>
+            <center>
+                <div class="div1">
+                    <img src="Capture d'écran 2026-03-18 130320.png" alt="" srcset=""><br>
+                    <img src="Capture d'écran 2026-03-18 130429.png" alt="" srcset=""><br>
+                    <img src="Capture d'écran 2026-03-18 130547.png" alt="" srcset=""><br>
+                </div>
+            </center>
+        </p>
 
-    <center><img src="code.png" alt=""><br></center>
+        <div class="card">
+            <h3>Random Number Generator</h3>
+            <p>Generate numbers between 1000 and 9999.</p>
+        </div>
+        <br>
+
+        <center><img src="code.png" alt=""><br></center>
 
 
-<div class="card">
-<h3>Quotes Website</h3>
-<p>Shows random quotes.</p>
-</div><br>
-<div class="card">
-<h3 style="text-transform: capitalize;">calculer moyenne 2emes annees secondaire</h3>
-<a href="https://omarhmissi7.github.io/Calculer_Moyenne_2eme_Annees_Secondaire/"><button>GO TO LINK</button></a>
-</div><br>
-<center>
-    <div class="div1">
-    <img src="img1.png" alt="">
-    <img src="img2.png" alt="">
-    <img src="img3.png" alt="">
-</div>
-</center>
-<div class="card">
-    <h3 style="text-transform: capitalize;">math quiz</h3>
-    <a href="https://omarhmissi7.github.io/Math_Quiz/"><button>VIEW THE LINK</button></a>
-</div><br>
-<center><div class="div1">
-    <img src="img4.png" alt="">
-    <img src="img5.png" alt="">
-    <img src="img6.png" alt="">
-</div></center>
+        <div class="card">
+            <h3>Quotes Website</h3>
+            <p>Shows random quotes.</p>
+        </div><br>
+        <div class="card">
+            <h3 style="text-transform: capitalize;">calculer moyenne 2emes annees secondaire</h3>
+            <a href="https://omarhmissi7.github.io/Calculer_Moyenne_2eme_Annees_Secondaire/"><button>GO TO
+                    LINK</button></a>
+        </div><br>
+        <center>
+            <div class="div1">
+                <img src="img1.png" alt="">
+                <img src="img2.png" alt="">
+                <img src="img3.png" alt="">
+            </div>
+        </center>
+        <div class="card">
+            <h3 style="text-transform: capitalize;">math quiz</h3>
+            <a href="https://omarhmissi7.github.io/Math_Quiz/"><button>VIEW THE LINK</button></a>
+        </div><br>
+        <center>
+            <div class="div1">
+                <img src="img4.png" alt="">
+                <img src="img5.png" alt="">
+                <img src="img6.png" alt="">
+            </div>
+        </center>
 
-</section>
+    </section>
 
-<section id="contact">
-<h2>Contact Me</h2>
+    <section id="contact">
+        <h2>Contact Me</h2>
 
-<p>Email: omarhmissi33@gmail.com</p>
-<p>Tel : +21622420433</p>
-<p>visit my intsagram profile :</p>
-<a href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA=="><button>GO</button></a>
-<br><br>
+        <p>Email: omarhmissi33@gmail.com</p>
+        <p>Tel : +21622420433</p>
+        <p>visit my intsagram profile :</p>
+        <a href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA=="><button>GO</button></a>
+        <br><br>
 
-<button onclick="alert('Thanks for visiting!')">
-Say Hello
-</button>
+        <button onclick="alert('Thanks for visiting!')">
+            Say Hello
+        </button>
 
-</section>
+    </section>
 
-<footer id="foot">
-<p>© 2026 Omar Hmeesy</p>
-</footer>
+    <footer id="foot">
+        <p style="text-transform: none;">©copyright 2026 made by Omar Hmeesy</p>
+    </footer>
 
 </body>
 <script>
-    
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = "translateY(0) scale(1)";
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
 </script>
+
 </html>
