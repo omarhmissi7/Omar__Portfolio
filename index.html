@@ -47,7 +47,8 @@
 
 
         }
-        a:focus{
+
+        a:focus {
             background-color: cyan;
         }
 
@@ -78,7 +79,7 @@
             animation: fadeUp 1s ease forwards;
         }
 
-        .card::after:hover{
+        .card::after:hover {
             transform: scale(1.1);
         }
 
@@ -199,7 +200,11 @@
 
         p {
             text-align: center;
+            
 
+        }
+        .p{
+            border-right: 3px solid white;
         }
 
         .img {
@@ -244,10 +249,40 @@
 
 
         }
+
+        .a {
+            width: 30px;
+        }
+
+        .a:hover {
+            background: none;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            transition: 400ms;
+        }
+
+        #insta:hover {
+            transform: scale(1.3);
+        }
+
+        #fcb:hover {
+            box-shadow: 0 0 15px 15px #1877F2;
+            transform: scale(1);
+
+        }
+
+        #lnkdn:hover {
+            box-shadow: 0 0 15px 15px #0077B5;
+        }
     </style>
 </head>
 
 <body id="body">
+
 
     <header id="head">
         <h1>Omar Hmeesy</h1>
@@ -266,8 +301,23 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p class="p">Hello, I'm Omar. I'm an expert at html , css and intermediate at javascript and python </p>
-        <p class="p">I'm 17 years old and i'm studying at 2nd of secondary education at pc scienses</p>
+        <p class="p" id="aboutme"></p>
+        <script>
+            let text = "Hello, I'm Omar. I'm an expert at html , css and intermediate at javascript and python I'm 17 years old and i'm studying at 2nd of secondary education at pc scienses";
+            let i = 0;
+            function write() {
+
+                if (i < text.length) {
+                    document.getElementById("aboutme").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(write, 50);
+                }
+            }
+            
+                write();
+                
+        </script>
+
     </section>
 
     <section id="skills">
@@ -359,14 +409,18 @@
 
         <p style="text-transform: lowercase;">Email: omarhmissi33@gmail.com</p>
         <p>Tel : +21622420433</p>
-        <p>visit my intsagram profile :</p>
-        <a href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA=="><button>GO</button></a>
-        <br><br>
-        <p>or visit my linkedin profile :</p>
-        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4z7WOQTsRY2M%2F5hkjmMsfg%3D%3D">
-            <button>LINKEDIN</button>
-        </a><br><br><br>
+        <p>visit my Accounts :</p>
+        <a class="a" href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA=="></a>
 
+        <img src="instagram.png" alt="" class="logo" id="insta">
+
+        <a class="a"
+            href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4z7WOQTsRY2M%2F5hkjmMsfg%3D%3D">
+            <img src="linkedin.png" alt="" class="logo" id="lnkdn">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61585699354939" class="a"><img src="facebook.png" alt=""
+                class="logo" id="fcb"></a>
+        <br><br><br>
         <button onclick="alert('Thanks For Visiting !')">
             Say Hello
         </button>
@@ -378,23 +432,6 @@
     </footer>
 
 </body>
-<script>
-    const cards = document.querySelectorAll('.card');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = "translateY(0) scale(1)";
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-
-    cards.forEach(card => {
-        observer.observe(card);
-    });
-</script>
 
 </html>
