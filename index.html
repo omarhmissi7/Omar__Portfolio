@@ -47,6 +47,9 @@
 
 
         }
+        a:focus{
+            background-color: cyan;
+        }
 
         .p {
             font-weight: 800;
@@ -75,8 +78,8 @@
             animation: fadeUp 1s ease forwards;
         }
 
-        .card:hover {
-            transform: rotate(360deg) scale(1.2);
+        .card::after:hover{
+            transform: scale(1.1);
         }
 
 
@@ -95,7 +98,8 @@
         .card::after {
             content: "";
             position: absolute;
-            inset: 2px;
+            inset: 5px;
+
             background: #020617;
             border-radius: 13px;
             z-index: -1;
@@ -304,9 +308,9 @@
         <p>
             <center>
                 <div class="div1">
-                    <img src="Capture d'écran 2026-03-18 130320.png" alt="" srcset=""><br>
-                    <img src="Capture d'écran 2026-03-18 130429.png" alt="" srcset=""><br>
-                    <img src="Capture d'écran 2026-03-18 130547.png" alt="" srcset=""><br>
+                    <img src="img11.png" alt="" srcset=""><br>
+                    <img src="img22.png" alt="" srcset=""><br>
+                    <img src="img33.png" alt="" srcset=""><br>
                 </div>
             </center>
         </p>
@@ -353,7 +357,7 @@
     <section id="contact">
         <h2>Contact Me</h2>
 
-        <p>Email: omarhmissi33@gmail.com</p>
+        <p style="text-transform: lowercase;">Email: omarhmissi33@gmail.com</p>
         <p>Tel : +21622420433</p>
         <p>visit my intsagram profile :</p>
         <a href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA=="><button>GO</button></a>
