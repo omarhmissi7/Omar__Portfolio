@@ -10,7 +10,8 @@
         html {
             scroll-behavior: smooth;
         }
-        h1{
+
+        h1 {
             font-size: 45px;
             text-transform: uppercase;
             font-family: serif;
@@ -203,7 +204,7 @@
             height: 210px;
             margin: 25px;
             padding: 0px;
-            
+
 
         }
 
@@ -213,10 +214,7 @@
 
         }
 
-        .p {
-            border-right: 3px solid white;
-            letter-spacing: 2px;
-        }
+
 
         .img {
             border: none;
@@ -329,6 +327,7 @@
             width: 20px;
             cursor: default;
         }
+
         #myRange1 {
             pointer-events: none;
             /* can't move */
@@ -367,6 +366,7 @@
             width: 20px;
             cursor: default;
         }
+
         #myRange2 {
             pointer-events: none;
             /* can't move */
@@ -405,6 +405,7 @@
             width: 20px;
             cursor: default;
         }
+
         #myRange3 {
             pointer-events: none;
             /* can't move */
@@ -443,6 +444,7 @@
             width: 20px;
             cursor: default;
         }
+
         #myRange4 {
             pointer-events: none;
             /* can't move */
@@ -481,17 +483,56 @@
             width: 20px;
             cursor: default;
         }
-        h1{
+
+        h1 {
             margin: 0;
         }
-        #omar{
+
+        #omar {
             margin: 40px;
             box-shadow: none;
         }
-        #c{
+
+        #c {
             padding-top: 8px;
         }
-    
+
+        #para {
+            width: 470px;
+            height: 560px;
+            background-color: #ffffff0e;
+            border-bottom: 7px solid black;
+            backdrop-filter: blur(30px);
+            box-shadow: 0 0 20px white;
+            border-radius: 20px;
+            padding-top: 40px;
+        }
+
+        .p {
+
+            font-family: arial;
+            margin-top: 70px;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: wavy;
+            line-height: 1.8;
+            width: 400px;
+        }
+
+        #bac {
+            text-align: left;
+            width: 700px;
+        }
+        #code{
+            width: 50px;
+            height: 50px;
+            margin: 0;
+        }
+        #l{
+            font-weight: 900;
+            font-size: larger;
+            margin: 5px;
+        }
     </style>
 </head>
 
@@ -503,7 +544,7 @@
         <script>
             let j = 0;
             let me = "Omar Hmeesy";
-            function omar(){
+            function omar() {
                 if (j < me.length) {
                     document.getElementById("me").innerHTML += me.charAt(j);
                     j++;
@@ -514,7 +555,7 @@
             omar()
         </script>
         <img src="myphoto.jpg" alt="" id="omar">
-        <p>Future Web Developer</p>
+        <p id="l">Future Web Developer</p> <img id="code" src="coding.png" alt="">
         <hr>
 
         <nav>
@@ -528,20 +569,27 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p class="p" id="aboutme"></p>
+        <center>
+            <div id="para">
+
+                <p class="p" id="aboutme">I’m Omar, a passionate web development student from Tunisia, focused on
+                    building
+                    clean and user-friendly websites. I started my journey by learning HTML, CSS, and JavaScript, and
+                    I’m
+                    continuously improving my skills by creating real projects.
+                    I enjoy turning ideas into simple and functional digital experiences. My goal is to become a
+                    professional developer and work on impactful projects, whether as a freelancer or within a team.
+                    I’m always motivated to learn new technologies, improve my problem-solving skills, and push my
+                    limits in
+                    the world of programming.</p>
+
+            </div>
+        </center>
         <script>
-            let text = "Hello, I'm Omar. I'm an expert at html , css and intermediate at javascript and python I'm 17 years old and i'm studying at 2nd of secondary education at pc scienses";
-            let i = 0;
-            function write() {
 
-                if (i < text.length) {
-                    document.getElementById("aboutme").innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(write, 50);
-                }
-            }
 
-            write();
+
+
 
         </script>
 
@@ -554,34 +602,34 @@
             <h3>HTML</h3>
             <p>Building website structure</p>
             <img src="html.png" alt="" class="img"><br>
-            <input type="range" name="" id="myRange" value="85" disabled >  85%
+            <input type="range" name="" id="myRange" value="85" disabled> 85%
         </div>
         <div class="card">
             <h3>Python</h3>
             <p>data structures and bases</p>
             <img src="python.png" alt="" class="img"><br>
-            <input type="range" name="" id="myRange1" value="60">  60%
+            <input type="range" name="" id="myRange1" value="45"> 45%
         </div>
 
         <div class="card">
             <h3>CSS</h3>
             <p>Design and layouts</p>
             <img src="css.png" alt="" class="img"><br>
-            <input type="range" name="" id="myRange2" value="90">  90%
+            <input type="range" name="" id="myRange2" value="90"> 90%
         </div>
 
         <div class="card">
             <h3>JavaScript</h3>
             <p>Website interactivity</p>
             <img src="js.webp" alt="" class="img"><br>
-            <input type="range" name="" id="myRange3" value="45">  45%
+            <input type="range" name="" id="myRange3" value="45"> 45%
         </div>
         <div class="card" id="c">
             <h3>C language</h3>
             <p>procedural programming language known for its efficiency</p>
             <img src="c.png" alt="" class="img" style="width: 70px;
             height: 70px;"><br>
-            <input type="range" name="" id="myRange4" value="10" >  10%
+            <input type="range" name="" id="myRange4" value="10"> 10%
         </div>
 
     </section>
@@ -592,27 +640,108 @@
         <div class="card">
             <h3>Calculer Moyenne Bac Principal</h3>
             <a href="https://omarhmissi7.github.io/Calculer_Moyenne_Bac_Principal/"><button>VIEW THE LINK</button></a>
-        </div>
-        <hr>
+        </div><br><br>
+        <h2 class="h2">About My Projet</h2>
+        <style>
+            .h2 {
+                text-transform: uppercase;
+                font-size: 30px;
+                text-align: left;
+                margin-left: 40px;
+                margin-bottom: 15px;
+                font-family: serif;
+            }
+        </style>
+        <section class="bacabout">
+            <p id="bac" align="left" style="width: 700; font-weight: 900; ">
+                📊 Calculer Moyenne Bac (Session Principale) <br>
+
+                - This project is a web application that helps Tunisian students calculate their Baccalaureate average
+                for the main session. <br>
+
+                - The user can enter their grades for different subjects, and the application automatically calculates
+                the final average based on the official coefficients system used in Tunisia.
+            </p>
+            <hr>
+            <h3 align="left">🛠️ Technologies Used</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+            <hr>
+            <h3 class="h3" align="">⚡ Features</h3>
+            <ul>
+                <li>Simple and user-friendly interface</li>
+                <li>Input fields for all subjects</li>
+                <li>Automatic calculation of the average</li>
+                <li>Supports Bac main session system</li>
+                <li>Instant result display</li>
+            </ul>
+            <hr>
+            <h3 class="h3">💡 What I Learned</h3>
+            <p id="wil">Through this project, I learned how to:</p>
+            <ul>
+                <li>Work with user input in JavaScript</li>
+                <li>Perform calculations using formulas</li>
+                <li>Manipulate the DOM to display results dynamically</li>
+
+                <li>Build a real-world useful application</li>
+            </ul>
+        </section>
+        <h2 class="h">
+            There is some screenshots below
+        </h2>
+
+        <style>
+            li,
+            .h3 {
+                text-align: left;
+                font-weight: 900;
+
+            }
+
+            li {
+                font-size: 20px;
+            }
+
+            #wil {
+                text-align: left;
+                font-weight: 900;
+                font-size: larger;
+            }
+
+            .h {
+                text-transform: uppercase;
+                font-weight: 900;
+                font-family: serif;
+                text-decoration: underline;
+            }
+
+            li {
+                font-family: serif;
+            }
+
+            .bacabout {
+                border-radius: 30px;
+                box-shadow: 0 0 25px 20px #03395a;
+                background-color: #03395a;
+                margin-bottom: 45px;
+                margin: 50px;
+            }
+        </style>
         <p>
             <center>
-                
-                    <img src="img11.png" alt="" srcset="">
-                    <img src="img22.png" alt="" srcset=""><br>
-                    <img src="img33.png" alt="" srcset="">
-                
+
+                <img src="img11.png" alt="" srcset="">
+                <img src="img22.png" alt="" srcset=""><br>
+                <img src="img33.png" alt="" srcset="">
+
             </center>
         </p>
         <hr>
 
-        <div class="card">
-            <h3>Random Number Generator</h3>
-            <p>Generate numbers between 1000 and 9999.</p>
-        </div>
-        <br>
-        <hr>
-
-        <center><img src="code.png" alt=""><br></center>
+        
 
 
         <div class="card">
@@ -623,24 +752,56 @@
             <h3 style="text-transform: capitalize;">calculer moyenne 2emes annees secondaire</h3>
             <a href="https://omarhmissi7.github.io/Calculer_Moyenne_2eme_Annees_Secondaire/"><button>GO TO
                     LINK</button></a>
-        </div><br>
+        </div>
+        <br>
+        <section class="bacabout">
+            <h2 class="h2">📊 Calculer Moyenne 2ème Année Secondaire</h2>
+            <p style="font-weight: 900; text-align: left; width: 700px;">
+
+                -  This project is a web application designed to help Tunisian students
+                to calculate their average for the second year of secondary school.
+            </p>
+            <p style="font-weight: 900; text-align: left; width: 700px;">
+                -  Users can enter their grades for different subjects, and the application calculates the final average
+                automatically based on the coefficients and system used in Tunisian schools.
+            </p>
+            <hr>
+            <h3 class="h3">🛠️ Technologies Used</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+            <hr>
+            <h3 class="h3">⚡ Features</h3>
+            <ul>
+                <li>Simple and easy-to-use interface</li>
+                <li>Input fields for multiple subjects</li>
+                <li>Automatic average calculation</li>
+                <li>Instant display of results</li>
+                <li>Designed for Tunisian education system</li>
+            </ul>
+
+        </section>
+
         <center>
-            
-                <img src="img1.png" alt="">
-                <img src="img2.png" alt=""><br>
-                <img src="img3.png" alt="">
-            
-        </center><hr>
+
+            <img src="img1.png" alt="">
+            <img src="img2.png" alt=""><br>
+            <img src="img3.png" alt="">
+
+        </center>
+        <hr>
         <div class="card">
             <h3 style="text-transform: capitalize;">math quiz</h3>
             <a href="https://omarhmissi7.github.io/Math_Quiz/"><button>VIEW THE LINK</button></a>
         </div><br>
         <center>
-            
-                <img src="img4.png" alt="">
-                <img src="img5.png" alt=""><br>
-                <img src="img6.png" alt="">
-            
+
+            <img src="img4.png" alt="">
+            <img src="img5.png" alt=""><br>
+            <img src="img6.png" alt="">
+
         </center>
 
     </section>
@@ -651,9 +812,11 @@
         <p style="text-transform: lowercase;">Email: omarhmissi33@gmail.com</p>
         <p>Tel : +21622420433</p>
         <p>visit my Accounts :</p>
-        <a class="a" href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA=="></a>
+        <a class="a" href="https://www.instagram.com/__omarrr___hmeesy?igsh=MW94ZGYybmE2NHl0eA==">
+            <img src="instagram.png" alt="" class="logo" id="insta">
+        </a>
 
-        <img src="instagram.png" alt="" class="logo" id="insta">
+        
 
         <a class="a"
             href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4z7WOQTsRY2M%2F5hkjmMsfg%3D%3D">
