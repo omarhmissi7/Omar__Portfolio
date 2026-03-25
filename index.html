@@ -10,6 +10,8 @@
         html {
             scroll-behavior: smooth;
         }
+        * {
+        }
 
         h1 {
             font-size: 45px;
@@ -33,6 +35,8 @@
         header {
             background: #020617;
             padding: 20px;
+            cursor: url(image.png);
+
             text-align: center;
         }
 
@@ -289,7 +293,7 @@
             box-shadow: 0 0 15px 15px #0077B5;
         }
 
-        #myRange {
+        .myRange {
             pointer-events: none;
             /* can't move */
             -webkit-appearance: none;
@@ -300,7 +304,7 @@
             background: #FF6D00;
         }
 
-        #myRange::-webkit-slider-thumb {
+        .myRange::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             height: 20px;
@@ -313,13 +317,13 @@
         }
 
         /* Firefox */
-        #myRange::-moz-range-track {
+        .myRange::-moz-range-track {
             background: #FF6D00;
             height: 10px;
             border-radius: 5px;
         }
 
-        #myRange::-moz-range-thumb {
+        .myRange::-moz-range-thumb {
             background: #FF6D00;
             border: 2px solid #fff;
             border-radius: 50%;
@@ -499,24 +503,28 @@
 
         #para {
             width: 470px;
-            height: 560px;
+            height: 260px;
             background-color: #ffffff0e;
             border-bottom: 7px solid black;
             backdrop-filter: blur(30px);
             box-shadow: 0 0 20px white;
             border-radius: 20px;
-            padding-top: 40px;
+            padding-top: 0px;
+            overflow: auto;
+            scrollbar-color: #ffffff0e;
+
         }
 
         .p {
 
             font-family: arial;
-            margin-top: 70px;
+            margin-top: 10px;
             color: #ffffff;
             text-align: center;
             text-decoration: wavy;
             line-height: 1.8;
             width: 400px;
+            
         }
 
         #bac {
@@ -602,7 +610,7 @@
             <h3>HTML</h3>
             <p>Building website structure</p>
             <img src="html.png" alt="" class="img"><br>
-            <input type="range" name="" id="myRange" value="85" disabled> 85%
+            <input type="range" name="" class="myRange" value="85" disabled> 85%
         </div>
         <div class="card">
             <h3>Python</h3>
@@ -630,6 +638,12 @@
             <img src="c.png" alt="" class="img" style="width: 70px;
             height: 70px;"><br>
             <input type="range" name="" id="myRange4" value="10"> 10%
+        </div>
+        <div class="card" style="padding: 7px;">
+            <h3>Scratch</h3>
+            <p>a free visual programming language to create games, stories, and animations</p>
+            <img src="Scratch.logo.S.png" alt="" class="img">
+            <input type="range" name="" id="" class="myRange"> 50%   
         </div>
 
     </section>
@@ -724,10 +738,11 @@
 
             .bacabout {
                 border-radius: 30px;
-                box-shadow: 0 0 25px 20px #03395a;
-                background-color: #03395a;
+                box-shadow: 0 0 25px 20px #03395a3d;
+                background-color: #03395a5b;
                 margin-bottom: 45px;
                 margin: 50px;
+                backdrop-filter: blur(35px);
             }
         </style>
         <p>
