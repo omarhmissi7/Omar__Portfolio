@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do App</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+    
+
+    input {
+      padding: 15px;
+      width: 200px;
+      border-radius : 15px;
+      border: 3px solid #2ecc71;
+      font-weight : 900;
+      font-size : 21px;
+      background: none;
+      color: #fff;
+
+      
+    }
+    input::placeholder{
+      font-size: 17px;
+    }
+    input:focus{
+      outline: none;
+      
+
+    }
+
+    .button {
+      padding: 10px;
+      cursor: pointer;
+      border: 3px solid blueviolet;
+      background: #000;
+      color: blueviolet;
+      font-weight: 900;
+      border-radius: 10px;
+      transition: 250ms;
+    }
+    
+
+    li {
+      list-style: none;
+      margin: 10px;
+      background: #222;
+      padding: 10px;
+      display: flex;
+      font-size : 19px;
+      justify-content: space-between;
+      text-transform: capitalize;
+      font-weight: 900;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .btn{
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+      border-radius: 100%;
+      border: 3px solid black;
+    }
+    p{
+      text-align: left;
+    }
+    .menu{
+      padding: 1px;
+      font-size: 30px;
+      
+    }
+    #menu{
+      border: 3px solid white;
+      width: 200px;height: 110px;
+      padding: 10px;
+      text-align: left;
+      align-items: center;
+      margin: 0;
+    }
+    .input{
+      padding: 3px;
+      margin: 3px;
+      height: 20px;
+      width: 20px;
+      left: 0px;
+      
+    }
+    #btn1{
+      background-color: #000;
+      border: 3px solid #fff;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <p><button class="menu" id="btn1" onclick="tog()">⚙️</button></p>
+  <div id="menu" hidden>
+    <p><label for="" id="lbl">Dark Mode     </label><input type="checkbox" name="" id="dm" class="input" onclick="dm()" checked><br></p>
+      
+    <p></p>
+    <p><button align="left">About</button></p>
+    
+  </div>
+
+
+
+  <div class="container">
+    <h1 id="txt">To Do App</h1>
+
+    <input type="text" id="taskInput" placeholder="Add task">
+    <button onclick="addTask()" class="button" id="add">Add</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function saveTasks() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function renderTasks() {
+      let list = document.getElementById("taskList");
+      list.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        let li = document.createElement("li");
+
+        li.innerHTML = `
+          <span onclick="toggleTask(${index})" class="${task.done ? 'done' : ''}">
+            ${task.text}
+          </span>
+          <button onclick="deleteTask(${index})" class="btn">X</button>
+        `;
+
+        list.appendChild(li);
+      });
+    }
+
+    function addTask() {
+      let input = document.getElementById("taskInput");
+      let text = input.value;
+
+      if (text === "") return;
+
+      tasks.push({ text: text, done: false });
+
+      input.value = "";
+      saveTasks();
+      renderTasks();
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      saveTasks();
+      renderTasks();
+    }
+
+    function toggleTask(index) {
+      tasks[index].done = !tasks[index].done;
+      saveTasks();
+      renderTasks();
+    }
+
+    renderTasks();
+    function tog(){
+      let menu = document.getElementById("menu");
+      menu.hidden = !menu.hidden
+    }
+    function dm(){
+      let body = document.getElementById("body");
+      let menu = document.getElementById("menu");
+      let inp = document.getElementById("taskInput");
+      let btn= document.getElementById("add");
+      let txt = document.getElementById("txt");
+      let dm = document.getElementById("dm").checked;
+      let lbl= document.getElementById("lbl");
+      let li = document.getElementById("li");
+      let btn1 = document.getElementById("btn1");
+      if (dm) {
+        body.style.backgroundColor = "black";
+        txt.style.color = "white";
+        btn.style.backgroundColor = "black";
+        menu.style.border = "3px solid white";
+        menu.style.backgroundColor= "black"
+        lbl.style.color = "white";
+        inp.style.color = "white";
+        tasks.style.backgroundColor = "white";
+        btn1.style.backgroundColor = "black";
+        btn1.style.border = "3px solid #fff";
+      } else {
+        body.style.backgroundColor = "white";
+        txt.style.color = "black";
+        btn.style.backgroundColor = "white";
+        menu.style.border = "3px solid black";
+        menu.style.backgroundColor= "white"
+        lbl.style.color = "black";
+        inp.style.color = "black";
+        tasks.style.backgroundColor = "white";
+        btn1.style.backgroundColor = "white";
+        btn1.style.border = "3px solid #000";
+
+
+      }
+    }
+  </script>
+
+</body>
+</html>

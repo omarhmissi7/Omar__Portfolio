@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 TECH INFO QUIZ</title>
+</head>
+<style>
+    button{
+        width: 150px;
+        height: 35px;
+        margin-top: 10px;
+        border: 2px solid rgb(214, 128, 0);
+        border-radius: 5px;
+        background-color: rgb(255, 240, 211);
+        transition: 0.5s;
+    }
+    button:hover{
+        width: 149px;
+        height: 33.5px;
+        background-color: rgb(226, 147, 1);
+    }
+    div{
+        border: 3px solid black;
+        width: 300px;
+        height: 300px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        background-color: rgb(241, 241, 241);
+        transition: 0.3s;
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(255, 255, 255);
+        
+    }
+    .btn1:focus{
+        background-color: red;
+    }
+    .btn2:focus{
+        background-color: green;
+    }
+    .btn3:focus{
+        background-color: red;
+    }
+    .btn4:focus{
+        background-color: red;
+    }
+    .btn5:focus{
+        background-color: red;
+    }
+    .btn6:focus{
+        background-color: green;
+    }
+    .btn7:focus{
+        background-color:red ;
+    }
+    .btn8:focus{
+        background-color: red;
+    }
+    .btn9:focus{
+        background-color: red;
+    }
+    .btn10:focus{
+        background-color:red ;
+    }
+    .btn11:focus{
+        background-color: green;
+    }
+    .btn12:focus{
+        background-color:red ;
+    }
+    .btn13:focus{
+        background-color: red;
+    }
+    .btn14:focus{
+        background-color:red ;
+    }
+    .btn15:focus{
+        background-color:green ;
+    }
+    .btn16:focus{
+        background-color:red ;
+    }
+    .btn17:focus{
+        background-color: red;
+    }
+    .btn18:focus{
+        background-color: red;
+    }
+    .btn19:focus{
+        background-color: red;
+    }
+    .btn20:focus{
+        background-color: green;
+    }
+    .btn:hover{
+        border: 3px solid red;
+        background-color: rgb(255, 0, 0);
+        height: 40px;
+        width: 165px;
+        color: white;
+        font-weight: bold;
+    }
+    .btn{
+        border: 3px solid red;
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        width: 165px;
+        color:rgb(255, 0, 0);
+        font-weight: bold;
+    }
+    .btn21:focus{
+        background-color: red;
+    }
+    .btn22:focus{
+        background-color: red;
+    }
+    .btn23:focus{
+        background-color: green;
+    }
+    .btn24:focus{
+        background-color: red;
+    }
+    .btn25:focus{
+        background-color: red;
+    }
+    .btn26:focus{
+        background-color: red;
+    }
+    .btn27:focus{
+        background-color: green;
+    }
+    .btn28:focus{
+        background-color: red;
+    }
+    .btn29:focus{
+        background-color: red;
+    }
+    .btn30:focus{
+        background-color: red;
+    }
+    .btn31:focus{
+        background-color: red;
+    }
+    .btn32:focus{
+        background-color: green;
+    }
+    .btn33:focus{
+        background-color: green;
+    }
+    .btn34:focus{
+        background-color: red;
+    }
+    .btn35:focus{
+        background-color: red;
+    }
+    .btn36:focus{
+        background-color: red;
+    }
+    .btn37:focus{
+        background-color: red;
+    }
+    .btn38:focus{
+        background-color: red;
+    }
+    .btn39:focus{
+        background-color: red;
+    }
+    .btn40:focus{
+        background-color: green;
+    }
+    .btn41:focus{
+        background-color: red;
+    }
+    .btn42:focus{
+        background-color: red;
+    }
+    .btn43:focus{
+        background-color: green;
+    }
+    .btn44:focus{
+        background-color: red;
+    }
+    .btn45:focus{
+        background-color: red;
+    }
+    .btn46:focus{
+        background-color: red;
+    }
+    .btn47:focus{
+        background-color: green;
+    }
+    .btn48:focus{
+        background-color: red;
+    }
+    .btn49:focus{
+        background-color: green;
+    }
+    .btn50:focus{
+        background-color: red;
+    }
+    .btn51:focus{
+        background-color: red;
+    }
+    .btn52:focus{
+        background-color: red;
+    }
+    .btn53:focus{
+        background-color: red;
+    }
+    .btn54:focus{
+        background-color: red;
+    }
+    .btn55:focus{
+        background-color: red;
+    }
+    .btn56:focus{
+        background-color: green;
+    }
+    .btn57:focus{
+        background-color: red;
+    }
+    .btn58:focus{
+        background-color: red;
+    }
+    .btn59:focus{
+        background-color: green;
+    }
+    .btn60:focus{
+        background-color: red;
+    }
+    .btn61:focus{
+        background-color: red;
+    }
+    .btn62:focus{
+        background-color: red;
+    }
+    .btn63:focus{
+        background-color: red;
+    }
+    .btn64:focus{
+        background-color: green;
+    }
+    .btn65:focus{
+        background-color: green;
+    }
+    .btn66:focus{
+        background-color: red;
+    }
+    .btn67:focus{
+        background-color: red;
+    }
+    .btn68:focus{
+        background-color: red;
+    }
+    .btn69:focus{
+        background-color: red;
+    }
+    .btn70:focus{
+        background-color: red;
+    }
+    .btn71:focus{
+        background-color: green;
+    }
+    .btn72:focus{
+        background-color: red;
+    }
+    .btn73:focus{
+        background-color: red;
+    }
+    .btn74:focus{
+        background-color: red;
+    }
+    .btn75:focus{
+        background-color: red;
+    }
+    .btn76:focus{
+        background-color: green;
+    }
+    .btn77:focus{
+        background-color: red;
+    }
+    .btn78:focus{
+        background-color: red;
+    }
+    .btn79:focus{
+        background-color: green;
+    }
+    .btn80:focus{
+        background-color: red;
+    }
+    body{
+        background: linear-gradient(rgb(26, 26, 26),white);
+    }
+    
+
+
+
+
+
+
+    
+    
+</style>
+<script>
+    let score1 = 0;
+    function func(){
+        score1 += 1;
+        
+    }
+    function func1(){
+        score1 += 1;
+    }
+    function func2(){
+        score1 += 1;
+    }
+    function func3(){
+        score1 += 1;
+    }
+    function func4(){
+        score1 += 1;
+    }
+    function score(){
+        alert("Your score is" + " " +score1 +"/20");
+        if(score1 == 20){
+            alert("You are So Good You Impressed Me !!!")
+        }
+        if(score1 > 20){
+            alert("You did something illegal")
+        }
+       
+    }
+    function func5(){
+        score1 += 1;
+    }
+    function reset(){
+        score1 = 0
+    }
+    function func6(){
+        score1 += 1
+    }
+    function func7(){
+        score1 += 1
+    }
+    function func8(){
+        score1 += 1
+    }
+    function func9(){
+        score1 += 1
+    }
+    function func10(){
+        score1 += 1
+    }
+    function func11(){
+        score1 += 1
+    }
+    function func12(){
+        score1 += 1
+    }
+    function func13(){
+        score1 += 1
+    }
+    function func14(){
+        score1 += 1
+    }
+    function func15(){
+        score1 += 1
+    }
+    function func16(){
+        score1 += 1
+    }
+    function func17(){
+        score1 += 1
+    }
+    function func18(){
+        score1 += 1
+    }
+    function func19(){
+        score1 += 1
+    }
+</script>
+<body>
+    <center>
+        <h1>This game is a 20 maths , physics and PC sciences questions</h1>
+    <div class="div1">
+        <p>What is the symbol of iron</p>
+        <button class="btn1">Al</button><br>
+        <button class="btn2" onclick="func()">Fe</button><br>
+        <button class="btn3">Na</button><br>
+        <button class="btn4">S</button><br>
+    </div>
+    <div class="div2">
+        <p>What is the solution of this equation</p>
+        <p>3x + 2 = 8</p>
+        <button class="btn5">1</button><br>
+        <button class="btn6" onclick="func1()">2</button><br>
+        <button class="btn7">3</button><br>
+        <button class="btn8">4</button><br>
+    </div>
+    <div class="div3">
+        <p>What is the square root of 441</p>
+        <button class="btn9">19</button><br>
+        <button class="btn10">20</button><br>
+        <button class="btn11" onclick="func2()">21</button><br>
+        <button class="btn12">22</button><br>
+            
+    </div>
+    <div class="div4">
+        <p>What is the number of protons of aluminium</p>
+        <button class="btn13">11</button><br>
+        <button class="btn14">12</button><br>
+        <button class="btn15" onclick="func3()">13</button><br>
+        <button class="btn16">14</button><br>
+    </div>
+    <div class="div5">
+        <p>What is the solutions of this equation:</p>
+        <p>log(x) = 3</p>
+        <button class="btn17">1</button><br>
+        <button class="btn18">10</button><br>
+        <button class="btn19">100</button><br>
+        <button class="btn20" onclick="func4()">1000</button><br>
+    </div>
+    <div>
+        <p>What is the water molecule</p>
+        <button class="btn21">CL3</button><br>
+        <button class="btn22">O2</button><br>
+        <button class="btn23" onclick="func5()">H2O</button><br>
+        <button class="btn24">FE3</button><br>
+    </div>
+    <div>
+        <p>
+            What is the symbol of helium
+        </p>
+        <button class="btn25">H</button>
+        <button class="btn26">F</button>
+        <button class="btn27" onclick="func6()">He</button>
+        <button class="btn28">O</button>
+    </div>
+    <div>
+        <p>
+            What is the international unit of intensity
+        </p>
+        <button class="btn29">Watt</button>
+        <button class="btn30">Volt</button>
+        <button class="btn31">Meter</button>
+        <button class="btn32" onclick="func7()">Amper</button>
+    </div>
+    <div>
+        <p>
+            How to calculate the power
+        </p>
+        <button class="btn33" onclick="func8()">U * I</button>
+        <button class="btn34">P * I</button>
+        <button class="btn35">U * 2</button>
+        <button class="btn36">U + 10</button>
+    </div>
+    <div>
+        <p>
+            |3 - 6| = 
+        </p>
+        <button class="btn37"> -3</button>
+        <button class="btn38">9</button>
+        <button class="btn39">-9</button>
+        <button class="btn40" onclick="func9()">3</button>
+    </div>
+    <div>
+        <p>
+            How to make the computer print the first 10 numbers easily in python
+        </p>
+        <button class="btn41">Use the function print() 10 times</button>
+        <button class="btn42">Use the function repeat()</button>
+        <button class="btn43" onclick="func10()">Use loops ( for , while )</button>
+        <button class="btn44">None of the above</button>
+    </div>
+    <div>
+        <p>
+            In python When we know how many times we will do a loop we use :
+        </p>
+        <button class="btn45">Do ... while</button>
+        <button class="btn46">Repeat...until</button>
+        <button class="btn47" onclick="func11()">For loop</button>
+        <button class="btn48"> None of the above</button>
+    </div>
+    <div>
+        <p>
+            Find the Extraneous element
+        </p>
+        <button class="btn49" onclick="func12()">for i in range...</button>
+        <button class="btn50">do...while</button>
+        <button class="btn51">let var = ...</button>
+        <button class="btn52">const var1 = ...</button>
+    </div>
+    <div>
+        <p>
+            In which temperature pure water freeze    
+        </p>
+        <button class="btn53">10 C°</button>
+        <button class="btn54">1 C°</button>
+        <button class="btn55">100 F°</button>
+        <button class="btn56" onclick="func13()">0 C°</button>
+    </div>
+    <div>
+        <p>
+            Any number except zero to the power of zero is equal to :
+        </p>
+        <button class="btn57">Itself</button>
+        <button class="btn58">0</button>
+        <button class="btn59" onclick="func14()">1</button>
+        <button class="btn60">None of the above</button>
+    </div>
+    <div>
+        <p>
+            f(x) = 3x + 9 <br> what is f(5)
+        </p>
+        <button class="btn61">0</button>
+        <button class="btn62">4</button>
+        <button class="btn63">5 </button>
+        <button class="btn64" onclick="func15()">24</button>
+    </div>
+    <div>
+        <p>
+            what is 5!
+        </p>
+        <button class="btn65" onclick="func16()">5*4*3*2*1</button>
+        <button class="btn66">5*5</button>
+        <button class="btn67">5+4+3+2+1</button>
+        <button class="btn68">None of the above</button>
+    </div>
+    <div>
+        <p>
+            What is the language that add the style to a webpage
+        </p>
+        <button class="btn69">HTML</button>
+        <button class="btn70">JavaScript</button>
+        <button class="btn71" onclick="func17()">Css</button>
+        <button class="btn72">PYTHON</button>
+    </div>
+    <div>
+        <p>
+            f(x) = 4x + 3...f(x) = 3, solve for x :
+        </p>
+        <button class="btn73">1</button>
+        <button class="btn74">2</button>
+        <button class="btn75">3</button>
+        <button class="btn76" onclick="func18()">0</button>
+    </div>
+    <div>
+        <p>
+            What is the first element in the periodic table
+        </p>
+        <button class="btn77">Helium</button>
+        <button class="btn78">Nitrogene</button>
+        <button class="btn79" onclick="func19()">Hydrogene</button>
+        <button class="btn80">Oxygene</button>
+    </div>
+    <button class="btn" onclick="score()" >SEE YOUR SCORE</button><br>
+    <button class="btn" onclick="reset()" >RESET</button>
+
+
+    </center>
+</body>
+</html>

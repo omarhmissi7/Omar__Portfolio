@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div class="box">
+
+            <h2 id="title">Login</h2>
+
+            <!-- LOGIN FORM -->
+            <div id="loginForm">
+                <input type="text" id="loginUser" placeholder="Username">
+                <input type="password" id="loginPass" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p id="loginMsg"></p>
+            </div>
+
+            <!-- SIGNUP FORM -->
+            <div id="signupForm" style="display: none;">
+                <input type="text" id="newUser" placeholder="Username">
+                <input type="password" id="newPass" placeholder="Password">
+                <button onclick="signup()">Sign Up</button>
+                <p id="signupMsg"></p>
+            </div>
+
+            <!-- TOGGLE BUTTON -->
+            <p id="toggleText">
+                Don't have an account?
+                <span onclick="toggleForm()" style="color: #38bdf8; cursor: pointer;">
+                    Create one
+                </span>
+            </p>
+
+        </div>
+    </center>
+</body>
+<script>
+let isLogin = true;
+
+function toggleForm() {
+    let loginForm = document.getElementById("loginForm");
+    let signupForm = document.getElementById("signupForm");
+    let title = document.getElementById("title");
+    let toggleText = document.getElementById("toggleText");
+
+    if(isLogin) {
+        // switch to SIGN UP
+        loginForm.style.display = "none";
+        signupForm.style.display = "block";
+        title.innerHTML = "Create Account";
+        toggleText.innerHTML = `
+            Already have an account?
+            <span onclick="toggleForm()" style="color:#38bdf8; cursor:pointer;">
+                Login
+            </span>
+        `;
+    } else {
+        // switch to LOGIN
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+        title.innerHTML = "Login";
+        toggleText.innerHTML = `
+            Don't have an account?
+            <span onclick="toggleForm()" style="color:#38bdf8; cursor:pointer;">
+                Create one
+            </span>
+        `;
+    }
+
+    isLogin = !isLogin;
+}
+</script>
+
+</html>
