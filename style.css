@@ -2,6 +2,7 @@ html {
             scroll-behavior: smooth;
         }
         * {
+            cursor: url("image.png");
         }
 
         h1 {
@@ -19,7 +20,7 @@ html {
             text-transform: capitalize;
             background: #0f172a;
             color: white;
-            cursor: auto;
+            
             padding-left: 300px;
         }
 
@@ -614,4 +615,6 @@ html {
             text-align: left;
             text-decoration: underline;
         }
+       
+        
 
