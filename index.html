@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="41_m.jpg" >
+    <link rel="icon" href="41_m.jpg">
 
 </head>
 
 <body id="body">
+    <div class="intro-screen">
+        <h1 class="intro-text">Welcome to omar portfolio 👋</h1>
+    </div>
 
 
     <header id="head">
@@ -378,7 +381,8 @@
             <img src="img5.png" alt=""><br>
             <img src="img6.png" alt="">
             <h2>this is my expertise certificate by blackbox.ai</h2>
-            <a style="color: #fff;" href="🎉 CERTIFICATE OF EXCELLENCE 🎉.pdf" download="certificate">👉 CERTIFICATE OF EXCELLENCE 👈</a>
+            <a style="color: #fff;" href="🎉 CERTIFICATE OF EXCELLENCE 🎉.pdf" download="certificate">👉 CERTIFICATE OF
+                EXCELLENCE 👈</a>
 
         </center>
 
@@ -402,8 +406,9 @@
         </a>
         <a href="https://www.facebook.com/profile.php?id=61585699354939" class="a"><img src="facebook.png" alt=""
                 class="logo" id="fcb"></a>
+                <a href="https://github.com/omarhmissi7"><img src="GitHub.png" alt="" id="gthb" class="logo"></a>
         <br><br><br>
-        <button onclick="alert('Thanks For Visiting !')">
+        <button onclick="alert('Thanks For Visiting 🫶')">
             Say Hello
         </button>
 
@@ -414,6 +419,27 @@
     </footer>
 
 </body>
+<script>
+    const introScreen = document.querySelector(".intro-screen");
+    const introText = document.querySelector(".intro-text");
+
+    window.addEventListener("load", () => {
+        // show text
+        setTimeout(() => {
+            introText.classList.add("show");
+        }, 300);
+
+        // hide whole screen
+        setTimeout(() => {
+            introScreen.classList.add("hide");
+        }, 2500);
+
+        // remove completely (optional)
+        setTimeout(() => {
+            introScreen.remove();
+        }, 3500);
+    });
+</script>
 
 
 </html>
